@@ -1,0 +1,239 @@
+@use "colors" as *;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+	color: $charcoalgrey;
+
+	&__top {
+		width: 100%;
+		height: 284px;
+		background-image: url("../img/illustration-sign-up-mobile.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $white;
+	}
+
+	&__title {
+		padding: 0.7em 0;
+		font-size: 3.6rem;
+	}
+
+	&__bottom {
+		padding: 0 2em;
+		background-color: $white;
+	}
+
+	&__list {
+		list-style-type: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		padding: 0.8em 0;
+		line-height: 24px;
+		font-weight: bold;
+	}
+
+	&__icon {
+		padding-right: 1.5em;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+
+		&--top {
+			padding-bottom: 1em;
+		}
+
+		&--small {
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding-bottom: 0.6em;
+		}
+	}
+
+	&__input {
+		padding: 1em;
+		width: 100%;
+		border: 1px solid $grey;
+		border-radius: 8px;
+		font-size: 1.6rem;
+	}
+
+	&__emailbox {
+		padding-top: 2em;
+	}
+
+	&__btn {
+		width: 100%;
+		margin: 2em 0;
+		padding: 1.25em;
+		font-size: 1.6rem;
+		border: none;
+		border-radius: 10px;
+		background: $darkgrey;
+		color: $white;
+		cursor: pointer;
+
+		&:hover {
+			background: rgb(254, 26, 161);
+			background: linear-gradient(
+				90deg,
+				rgba(254, 26, 161, 1) 0%,
+				rgba(255, 128, 43, 1) 100%
+			);
+			box-shadow: 0 0 15px rgb(254, 26, 161);
+		}
+	}
+
+	&__emailtop {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.popup {
+	display: none;
+	flex-direction: column;
+	padding: 12em 3em 1em 3em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: $white;
+	color: $darkgrey;
+
+	&__icon {
+		margin-bottom: 2em;
+		width: 60px;
+		height: 60px;
+	}
+
+	&__title {
+		font-size: 3rem;
+		padding-bottom: 1em;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
+
+	&__email {
+		font-weight: bold;
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 315px;
+		transform: translate(-50%);
+	}
+}
+
+@media (min-width: 576px) {
+	.main {
+		margin: 5em auto;
+		border-radius: 20px;
+	}
+
+	body {
+		background-color: $charcoalgrey;
+	}
+
+	.popup {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 600px;
+		width: 500px;
+		border-radius: 20px;
+		box-shadow: 0px 0px 8px $grey;
+		z-index: 5;
+
+		&__bg {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: $charcoalgrey;
+		}
+
+		&__icon {
+			margin-bottom: 2em;
+			width: 80px;
+			height: 80px;
+		}
+
+		&__title {
+			font-size: 3.4rem;
+			padding-bottom: 1em;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.main {
+		padding: 2em;
+		height: 593px;
+		flex-direction: row-reverse;
+		border-radius: 20px;
+		box-shadow: 0px 0px 8px $grey;
+		background-color: $white;
+
+		&__top {
+			width: 400px;
+			border-radius: 20px;
+			background-image: url("../img/illustration-sign-up-desktop.svg");
+		}
+
+		&__bottom {
+			padding-left: 4em;
+		}
+
+		&__top,
+		&__bottom {
+			height: 100%;
+		}
+
+		&__title {
+			padding-top: 1em;
+			font-size: 6rem;
+		}
+	}
+}
+
+.error-input {
+	background-color: rgba($tomato, 0.2);
+	border: 1px solid $tomato;
+	color: $tomato;
+
+	&:focus {
+		outline: 1.5px solid $tomato;
+	}
+}
+
+.error-message {
+	display: none;
+	color: $tomato;
+}
+
+.active {
+	display: block;
+}
+
+.active-popup {
+	display: flex;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Newletter Singup</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./dist/img/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./dist/css/style.min.css" />
+	</head>
+	<body>
+		<main class="main">
+			<div class="main__top"></div>
+			<div class="main__bottom">
+				<h1 class="main__title">Stay updated!</h1>
+				<p class="main__text main__text--top">
+					Join 60,000+ product managers receiving monthly updates on:
+				</p>
+				<ul class="main__list">
+					<li class="main__item">
+						<img
+							src="./dist/img/icon-list.svg"
+							alt="List icon with mark"
+							class="main__icon"
+						/>
+						<p class="main__text">
+							Product discovery and building what matters
+						</p>
+					</li>
+					<li class="main__item">
+						<img
+							src="./dist/img/icon-list.svg"
+							alt="List icon with mark"
+							class="main__icon"
+						/>
+						<p class="main__text">Measuring to ensure updates are a success</p>
+					</li>
+					<li class="main__item">
+						<img
+							src="./dist/img/icon-list.svg"
+							alt="List icon with mark"
+							class="main__icon"
+						/>
+						<p class="main__text">And much more!</p>
+					</li>
+				</ul>
+				<div class="main__emailbox">
+					<div class="main__emailtop">
+						<p class="main__text--small">Email address</p>
+						<p class="main__text--small error-message">Empty</p>
+					</div>
+					<input
+						class="main__input"
+						type="email"
+						placeholder="email@company.com"
+					/>
+				</div>
+				<button class="main__btn sub-btn">Subscribe to monthly newsletter</button>
+			</div>
+		</main>
+		<div class="popup">
+			<img
+				class="popup__icon"
+				src="./dist/img/icon-list.svg"
+				alt="List icon with mark"
+			/>
+
+			<h2 class="popup__title">Thanks for subscribing!</h2>
+			<p class="popup__text">
+				A confirmation email has been sent to
+				<span class="popup__email">ash@gmail.com</span>
+				Please open it and click the button inside to confirm your subscription.
+			</p>
+			<button class="main__btn popup__btn">Dismiss message</button>
+		</div>
+		<div class="popup__bg"></div>
+		<script src="./dist/js/script.min.js"></script>
+	</body>
+</html>
